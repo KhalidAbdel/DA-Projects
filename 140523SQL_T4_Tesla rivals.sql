@@ -1,6 +1,6 @@
 
 
-*/CHECK FOR DUPLICATES
+/*CHECK FOR DUPLICATES
 
 SELECT car_name, COUNT(*) AS count
 FROM t4
@@ -8,7 +8,7 @@ GROUP BY car_name
 HAVING COUNT(*) > 1;
 
 
-*/ FIND ALL TESLA MODELS
+/* FIND ALL TESLA MODELS
 
 create view tesla1705
 As
@@ -17,11 +17,11 @@ FROM t4_newtable
 WHERE 
 	car_name LIKE '%Tesla%'
 
-
+/*
 */ WHICH CAR CAN RIVAL TESLA IN TERMS OF RANGE, PRICE AND SPEED?
 
 create view view4
-As
+AS
 SELECT car_name, price1, max_range, top_speed, car_brand
 FROM t4_newtable
 WHERE 
@@ -80,7 +80,7 @@ SET car_brand = CASE
 
 	
 
-*/ HOW MANY EVs DOES EVERY MANUFACTURER HAVE?
+*/ HOW MANY EVs EVERY MANUFACTURER HAVE?
 
 SELECT count(car_name) as num_models, car_brand
 FROM t4_newtable
