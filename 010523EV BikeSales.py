@@ -7,7 +7,7 @@ electric_bike_costs = [101, 106, 101, 101, 201, 201, 201, 212, 215, 275, 280, 28
 
 #for the last 3 months, which type of bike had the highest sales growth as a percentage?
 
-import numpy as numpy
+import numpy 
 
 sales1 = mountain_bike_sales[-3:]
 sales2 = electric_bike_sales[-3:]
@@ -32,3 +32,21 @@ print ('Insights: \n' + '* Mountain bike sales increased by ' + str(increase1) +
       'compared to electric bike sales which has only increased by ' + str(increase2) + '%. \n'+
       '* Durint the same quarter, profits from mountain bikes also grew by ' + str(qtr_profit_mtn)+ '% \n'+
       'while electric bikes recorded profit of only ' + str(qtr_profit_elc)+ '%.')
+
+
+from matplotlib import pyplot as pyplot
+
+pyplot.style.use('seaborn')
+
+pyplot.plot(mountain_bike_sales, label = 'MtBike sales', linestyle = ':', color = 'red' )
+pyplot.plot(mountain_bike_costs, label = 'MtBike purchase cost', color = 'red')
+
+pyplot.plot(electric_bike_sales, label = 'Ebike sales', linestyle = ':', color = 'blue')
+pyplot.plot(electric_bike_costs, label = 'Ebike purchase cost', color = 'blue')
+
+pyplot.ylabel('sales in $')
+pyplot.xlabel('Month')
+pyplot.title('Mountain vs Electric Bikes')
+
+pyplot.legend()
+pyplot.show()
