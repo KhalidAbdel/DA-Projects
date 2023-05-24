@@ -1,7 +1,6 @@
 # This code repository contains examples of Python & SQL:
 
 1. Cryptocurrency portfolio:
-
 Uncovering the best cryptocurrency to invest in:
 Imported the web link to Excel, convert to csv then import into MS SQL server.
 Used DML to Produce a scatter chart showing the top performing cryptocurrencies
