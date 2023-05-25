@@ -1,4 +1,4 @@
-# This code repository contains examples of Python & SQL:
+# This repository contains code I have written in Python & SQL:
 
 1. Cryptocurrency portfolio:
 Uncovering the best cryptocurrency to invest in:
