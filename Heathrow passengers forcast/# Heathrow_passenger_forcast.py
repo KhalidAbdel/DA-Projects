@@ -68,11 +68,14 @@ import numpy as numpy
 import pandas as pandas
 import matplotlib.pyplot as pyplot
 df = pandas.read_excel(r'C:\Users\khali\Desktop\DA-LON4\T Heathrow Passengers\250523_heathrowflightpassengerdataset120123.xlsx')
+
+
 print(df.info())
+print(df.shape)
 print(df[['Date', 'Heathrow_Passengers']])
-
+#FINDING QUICK SUMMARY ABOUT THE DATA
+print(df.describe())
 #finding MEAN passenger numbers for 2019-2022 inclusive (pre and post covid)
-
 pre_covid = df.Heathrow_Passengers[:13]
 mean_preC = round(numpy.mean(pre_covid),0)
 print(mean_preC)
@@ -87,10 +90,12 @@ print(total_passengers)
 totalpsg_precovid_pc = numpy.sum(df.Heathrow_Passengers[:13]) / numpy.sum(df.Heathrow_Passengers) * 100
 print(totalpsg_precovid_pc)
 
+# summary = pandas.pivot_table(df)
+# print(summary)
 
 #defining variables 
-xaxis = df['Date']
-yaxis = df['Heathrow_Passengers']
-pyplot.plot(xaxis, yaxis)
-pyplot.show()
+# xaxis = df['Date']
+# yaxis = df['Heathrow_Passengers']
+# pyplot.plot(xaxis, yaxis)
+# pyplot.show()
 
