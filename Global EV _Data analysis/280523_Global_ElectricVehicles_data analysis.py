@@ -25,12 +25,6 @@ pyplot.legend()
 pyplot.grid(True)
 pyplot.show()
 
-
-
-# NUMBER OF CHARGING POINTS PER REGION (INCLUSIVE)
-chargingpoints_count = ev_data.groupby(['region', 'year'])['value'].sum()
-print(chargingpoints_count)
-
 # REMOVING COLUMNS FROM EV_data
 removed_columns = ev_data.drop(['category', 'parameter', 'mode', 'unit'], axis =1)
 filtered_row = ev_sales[ev_sales['powertrain'] == 'BEV']
@@ -50,7 +44,19 @@ pyplot.show()
 percentage = round(powertrain_type / total_powertrain * 100, 2)
 print(percentage)
 
+# NUMBER OF CHARGING POINTS PER REGION (INCLUSIVE)
+chargingpoints_count = ev_data.groupby(['region', 'year'])['value'].sum()
+print(chargingpoints_count)
 
+# DISTRIBUTION BY CHARGER TYPE (FAST/SLOW) 
+charging_type = ev_data.groupby(['charging type'])['year'].count()
+print(charging_type)
+
+colors = ['purple','grey']
+pyplot.bar(charging_type, label = charging_type.index, height = 4, color = colors)
+pyplot.legend()
+pyplot.title('Distribution by charger speed') 
+pyplot.show()
 
 
 
