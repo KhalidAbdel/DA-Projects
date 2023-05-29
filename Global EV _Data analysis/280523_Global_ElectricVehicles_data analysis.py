@@ -43,7 +43,7 @@ print(powertrain_type)
 
 pyplot.pie(powertrain_type, labels=powertrain_type.index, autopct='%1.1f%%')
 pyplot.legend()
-pyplot.title('EV distribution by powertrain')
+pyplot.title('plug-in hybrid electric vehicle (PHEV) vs battery-powered electric vehicle (BEV)')
 pyplot.show()
 
 # CALCULATING POWERTRAIN DISTRIBUTION PERCENTAGE
