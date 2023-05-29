@@ -56,6 +56,11 @@ print(percentage)
 chargingpoints_count = ev_data.groupby(['region', 'year'])['value'].sum()
 print(chargingpoints_count)
 
+unique = chargingpoints_count.unique()
+period = ev_sales['year']
+pyplot.plot(range(len(unique)), unique)
+pyplot.legend()
+pyplot.show()
 
 # DISTRIBUTION BY CHARGER TYPE (FAST/SLOW) 
 charging_type = ev_data.groupby(['charging type'])['year'].count()
