@@ -1,4 +1,4 @@
-This dataset contains passenger numbers through Heathrow airport from 2019 to 2022,
+The dataset contains passenger numbers through Heathrow airport from 2019 to 2022,
 and the analysis aims to address the following:
 
 1. Which month tends to be the busiest for Heathrow airport?
