@@ -5,6 +5,8 @@
 4. What is the ratio of charging infrastructure units to EVs in a specific region and year?
 5. Which region has the highest density of charging infrastructure per EV?
 6. Distribution of charging types in terms of speed
+7. What is the trend in CO2 emissions from the transportation sector in various regions?
+
 
 
 Data sources:
