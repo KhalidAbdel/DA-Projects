@@ -16,8 +16,9 @@ print(EV_count)
 # TOP 5 COUNTRIES WITH HIGHEST NUMBER OF EV SALES IN 2022
 top_regions = ev_sales[ev_sales.region.isin(['World', 'China', 'EU27', 'USA',]) & ev_sales.year.isin([2022])].head()
 print(top_regions)
+#USE MAX/LARGEST 
 
-
+# PLOTTING GRAPH
 EV_count = EV_count.reset_index()
 graph_data = EV_count.groupby('region')
 for region, region_data in graph_data:
@@ -55,12 +56,6 @@ print(percentage)
 # NUMBER OF CHARGING POINTS PER REGION (INCLUSIVE)
 chargingpoints_count = ev_data.groupby(['region', 'year'])['value'].sum()
 print(chargingpoints_count)
-
-unique = chargingpoints_count.unique()
-period = ev_sales['year']
-pyplot.plot(range(len(unique)), unique)
-pyplot.legend()
-pyplot.show()
 
 # DISTRIBUTION BY CHARGER TYPE (FAST/SLOW) 
 charging_type = ev_data.groupby(['charging type'])['year'].count()
